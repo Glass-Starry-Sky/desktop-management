@@ -5,13 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 引入字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googlefonts.cn/css?family=Merienda" rel="stylesheet">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
+  <!-- style="overflow:hidden" -->
+  <body >
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    
   </body>
 </html>
+<script>
+
+
+</script>
+<style>
+  
+    body{
+      /* 隐藏x轴滚动条 */
+      overflow-x:hidden;
+      /* background: url('./anim-background8.jpg') no-repeat; */
+     
+      background:rgba(22, 25, 37, 0.8);
+     
+    }
+    text{
+      color:white;
+    }
+
+/* 自定义滚动条 */
+::-webkit-scrollbar{width:8px;height:4px;}
+::-webkit-scrollbar-button{width:8px;height:0;}
+
+::-webkit-scrollbar-track{background:rgba(22, 25, 37, 0.8)}
+/* 核心滚动条 */
+::-webkit-scrollbar-thumb{background:#61a8df;-webkit-transition:.3s;transition:.3s;border-radius: 20px;}
+
+::-webkit-scrollbar-thumb:hover{background-color:#0debe4}
+
+::-webkit-scrollbar-thumb:active{background-color:#4a88f4}
+
+
+/* 媒体查询  自适应  */
+/* @media (min-width: 500px) {
+  .norm-min-width-ima{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    transform: translateX(0px)!important;
+    transition: all 1s;
+  }
+   
+}
+
+@media (min-width: 200px) {
+  .xs-min-width-ima{
+    position:fixed;
+    height: 100%;
+    // width: 100%; 
+    z-index: -1;
+    opacity: 0.3;
+    transform: translateX(-40%);
+    transition: all 1s;
+  }
+   
+} */
+</style>

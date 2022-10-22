@@ -1,0 +1,68 @@
+<!-- <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>测试php+js调用cmd命令行</title>
+</head>
+ 
+ 
+<body>
+ <a href="#" onclick="win_run(); return false;">调用cmd</a>
+</body>
+ 
+<script type="text/javascript">
+
+function win_run(){	
+var cmd=new ActiveXObject("WScript.Shell");
+cmd.run("cmd.exe /k ping 127.0.0.1 && cd test && activate py35 && python pr.py > result.txt");//百度搜索cmd多命令行一起写
+cmd=null;
+ window.setTimeout('window.close();',3000);
+}
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+0.不同的执行命令间需要 添加 & 或者 && 或者 || 来表明不同命令之间的依赖关系
+command1 & command2 用来分隔一个命令行中的多个命令。Cmd.exe 运行第一个命令，然后运行第二个命令。
+command1 && command2 只有在符号 && 前面的命令成功时，才用于运行该符号后面的命令。Cmd.exe 运行第一个命令，然后只有在第一个命令运行成功时才运行第二个命令。
+command1 || command2 只有在符号 || 前面的命令失败时，才用于运行符号 || 后面的命令。Cmd.exe 运行第一个命令，然后只有在第一个命令未能运行成功（接收到大于零的错误代码）时才运行第二个命令。
+
+1.对上边的命令行中cmd.exe /k解析：
+cmd /c dir 是执行完dir命令后关闭命令窗口。 
+cmd /k dir 是执行完dir命令后不关闭命令窗口。
+
+2.切换路径
+e:	#此命令就是切换到E盘
+f:	#此命令就是切换到F盘
+
+3.进入到对应文件夹(此处默认你已经进入到对应的磁盘下，例如E盘)
+cd dir_path
+
+4.执行相应的命令行命令
+activate py35	#有过anaconda使用经验的都懂，意在激活py35的环境
+
+5.输出重定向到对应txt文件
+command1 > result.txt	#就会将command1 的输出结果重定向输出到result.txt
+
+6.cmd窗口延时
+window.setTimeout('window.close();',3000)	#将cmd命令行延时3s退出
+
+7.隐藏cmd窗口
+cmd.run("cmd.exe /k ping 127.0.0.1 && cd test && activate py35 && python pr.py > result.txt",0);
+#这样的话，运行就不会弹出cmd窗口了。
+
+8.特别说明
+将对应的html文件在ie浏览器打开哦~
+————————————————
+版权声明：本文为CSDN博主「王延凯的博客」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_38468077/article/details/120508802 -->

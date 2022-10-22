@@ -1,0 +1,4 @@
+[0814/131723:INFO:exception_record.cc(518)] [QB]Process ID: 21056 Type: 1
+[0814/131725:ERROR:tcp_socket_win.cc(647)] closesocket: 应用程序没有调用 WSAStartup，或者 WSAStartup 失败。 (0x276D)
+[0814/133139:INFO:exception_record.cc(518)] [QB]Process ID: 15248 Type: 1
+[0814/134911:ERROR:tcp_socket_win.cc(647)] closesocket: 应用程序没有调用 WSAStartup，或者 WSAStartup 失败。 (0x276D)

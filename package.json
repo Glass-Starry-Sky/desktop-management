@@ -1,22 +1,49 @@
 {
-  "name": "desktop-management",
-  "version": "0.1.0",
+  "name": "DesktopX",
+  "version": "1.0.3",
   "private": true,
+  "description": "桌面管理工具",
+  "main": "background.js",
+  "license": "ISC",
+  "author": "GYX",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.9",
+    "bootstrap": "^5.2.0",
+    "child_process": "^1.0.2",
     "core-js": "^3.8.3",
+    "electron-store": "^4.0.0",
+    "element-plus": "^2.2.12",
+    "ffi-napi": "^4.0.3",
+    "jquery": "^3.6.0",
+    "nanoid": "^4.0.0",
+    "node-cmd": "^5.0.0",
+    "popper.js": "^1.16.1",
+    "ref-array-napi": "^1.2.2",
+    "ref-napi": "^3.0.3",
+    "ref-struct-napi": "^1.1.1",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "electron": "^13.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "less": "^4.0.0",
-    "less-loader": "^8.0.0"
+    "less-loader": "^8.0.0",
+    "unplugin-auto-import": "^0.11.1",
+    "unplugin-vue-components": "^0.22.0",
+    "vue-cli-plugin-electron-builder": "~2.1.1"
   },
   "browserslist": [
     "> 1%",
